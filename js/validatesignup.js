@@ -6,6 +6,9 @@ var pname = document.getElementById("name");
 var nameerror = document.getElementById("nameerror");
 let emailRegex = /^([A-Za-z0-9\.-]+)\@([A-Za-z0-9-]+)\.([A-Za-z]{2,3})(\.[A-Za-z]{2,3})?$/;
 let mobileRegex = /^[0-9]{10,10}$/;
+let mobileRegex1 = /^([0-9]{3,3})\.([0-9]{3,3})\.([0-9]{4,4})$/;
+let mobileRegex2 = /^([0-9]{3,3})\s([0-9]{3,3})\s([0-9]{4,4})$/;
+let mobileRegex3 = /^([0-9]{3,3})-([0-9]{3,3})-([0-9]{4,4})$/;
 let nameRegex = /^([A-Za-z]{1,30})(\s[A-Za-z]{1,30}){0,2}$/;
 let spChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
 var pwd = document.getElementById("pwd");
@@ -45,7 +48,7 @@ function emailvalidate() {
 }
 
 function mobilevalidate() {
-    if (mobileRegex.test(mobile.value)) {
+    if (mobileRegex.test(mobile.value) || mobileRegex1.test(mobile.value) || mobileRegex2.test(mobile.value) || mobileRegex3.test(mobile.value)) {
         mobileerror.innerHTML = "<div class='mt-4'><span class='alert alert-success rounded-0'>✔ Valid Mobile Number.</span></div>";
         mobilevalid = 1;
     } else {
