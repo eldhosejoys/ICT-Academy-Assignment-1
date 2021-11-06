@@ -47,17 +47,21 @@
                     <div class="card-body">
                         <h1 class="card-title text-center pb-5">Login to Kerala Tourism</h1>
                         <span class="card-text">
-                        <form action="/action_page.php">
-                            <div class="form-group">
-                                <label for="email">Email address:</label>
-                                <input required type="email" class="form-control" id="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Password:</label>
-                                <input required type="password" class="form-control" id="pwd">
-                            </div>
-                            <button type="submit" class="btn btn-success">Submit to login</button>
-                        </form></span><br>
+                        <form action="/action_page.php"  method="POST" id="formsubmitlogin">
+                            <span id="formerror"></span>
+                        <div class="form-group">
+                            <label for="email">Email address:</label>
+                            <input required type="email" class="form-control" id="email">
+                            <span id="emailerror"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input required type="password" class="form-control" id="pwd">
+                            <span id="pwderror"></span>
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit to login</button>
+                        </form>
+                        </span><br>
                         <p><a href="/signup.html"> Signup for an Account</a> |
                             <a href="/forgot.html">Forgot Password?</a></p>
                     </div>
@@ -190,6 +194,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/validatelogin.js"></script>
 </body>
 
 </html>

@@ -47,13 +47,16 @@
                     <div class="card-body">
                         <h1 class="card-title text-center pb-3">Forgot Password?</h1>
                         <span class="card-text">
-                        <form action="/action_page.php">
-                            <div class="form-group">
-                                <label for="email">Enter your email address:</label>
-                                <input required type="email" class="form-control" id="email">
-                            </div>
-                            <button type="submit" class="btn btn-success">Request for new password</button>
-                        </form></span><br>
+                        <form action="/action_page.php" method="POST" id="formsubmitforgot">
+                            <span id="formerror"></span>
+                        <div class="form-group">
+                            <label for="email">Enter your email address:</label>
+                            <input required type="email" class="form-control" id="email">
+                            <span id="emailerror"></span>
+                        </div>
+                        <button type="submit" class="btn btn-success">Request for new password</button>
+                        </form>
+                        </span><br>
                         <p><a href="/login.html"> Login to your account</a> | <a href="/signup.html"> Signup for an Account</a></p>
                     </div>
                 </div>
@@ -185,6 +188,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/validateforgot.js"></script>
 </body>
 
 </html>
