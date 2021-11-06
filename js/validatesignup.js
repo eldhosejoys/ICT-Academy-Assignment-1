@@ -111,7 +111,7 @@ function pwdvalidate() {
         pl = 40;
     }
     if (pstrength == 3) {
-        pstrengthbg = 'bg-info';
+        pstrengthbg = 'bg-warning';
         pl = 60;
     }
     if (pstrength == 4) {
