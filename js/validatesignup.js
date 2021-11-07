@@ -136,60 +136,60 @@ function pwdvalidate() {
 
 email.onfocus = function() {
     emailvalidate();
+    formerror.innerHTML = "";
     email.onkeyup = function() {
-        formerror.innerHTML = "";
         emailvalidate();
     }
 }
 
 email.onblur = function() {
+    formerror.innerHTML = "";
     if (emailvalid == 1) {
-        formerror.innerHTML = "";
         emailerror.innerHTML = "";
     }
 }
 
 pwd.onfocus = function() {
     pwdvalidate();
+    formerror.innerHTML = "";
     pwd.onkeyup = function() {
-        formerror.innerHTML = "";
         pwdvalidate();
     }
 }
 
 pwd.onblur = function() {
+    formerror.innerHTML = "";
     if (pwdvalid == 1) {
-        formerror.innerHTML = "";
         pwderror.innerHTML = "";
     }
 }
 
 pname.onfocus = function() {
     namevalidate();
+    formerror.innerHTML = "";
     pname.onkeyup = function() {
-        formerror.innerHTML = "";
         namevalidate();
     }
 }
 
 pname.onblur = function() {
+    formerror.innerHTML = "";
     if (namevalid == 1) {
-        formerror.innerHTML = "";
         nameerror.innerHTML = "";
     }
 }
 
 mobile.onfocus = function() {
     mobilevalidate();
+    formerror.innerHTML = "";
     mobile.onkeyup = function() {
-        formerror.innerHTML = "";
         mobilevalidate();
     }
 }
 
 mobile.onblur = function() {
+    formerror.innerHTML = "";
     if (mobilevalid == 1) {
-        formerror.innerHTML = "";
         mobileerror.innerHTML = "";
     }
 }

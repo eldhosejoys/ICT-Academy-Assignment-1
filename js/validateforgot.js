@@ -19,15 +19,15 @@ function emailvalidate() {
 
 email.onfocus = function() {
     emailvalidate();
+    formerror.innerHTML = "";
     email.onkeyup = function() {
-        formerror.innerHTML = "";
         emailvalidate();
     }
 }
 
 email.onblur = function() {
+    formerror.innerHTML = "";
     if (emailvalid == 1) {
-        formerror.innerHTML = "";
         emailerror.innerHTML = "";
     }
 }
