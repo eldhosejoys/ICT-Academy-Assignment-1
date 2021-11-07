@@ -49,6 +49,8 @@ function messagevalidate() {
         messageerror.innerHTML = "<div class='mt-4'><span class='alert alert-success rounded-0'>✔ Message looks fine.</span></div>";
         messagevalid = 1;
     } else {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         messageerror.innerHTML = "<div class='mt-4'><span class='alert alert-danger rounded-0'>✖ Minimum 10 characters are required.</span></div>";
         messagevalid = 0;
     }

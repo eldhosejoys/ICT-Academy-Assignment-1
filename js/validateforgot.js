@@ -7,6 +7,8 @@ var emailvalid = 0;
 
 function emailvalidate() {
     if (emailRegex.test(email.value)) {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         emailerror.innerHTML = "<div class='mt-4'><span class='alert alert-success rounded-0'>✔ Valid Email Id.</span></div>";
         emailvalid = 1;
     } else {

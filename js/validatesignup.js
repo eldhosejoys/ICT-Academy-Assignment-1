@@ -31,6 +31,8 @@ formsubmitsignup.onsubmit = function() {
     if (emailvalid == 1 && namevalid == 1 && mobilevalid == 1 && pwdvalid == 1) {
         return true;
     } else {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         formerror.innerHTML = "<div class='alert alert-danger rounded-0'>✖ Kindly check all the Fields of the Form. All Fields are required and should be valid.</div>";
         return false;
     }
