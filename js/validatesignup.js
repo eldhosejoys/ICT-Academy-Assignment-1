@@ -28,7 +28,7 @@ let p3r = /\d/;
 
 
 formsubmitsignup.onsubmit = function() {
-    if (emailvalid == 1 && namevalid == 1 && mobilevalid == 1 && pwdvalid == 1) {
+    if (emailRegex.test(email.value) && (mobileRegex.test(mobile.value) || mobileRegex1.test(mobile.value) || mobileRegex2.test(mobile.value) || mobileRegex3.test(mobile.value)) && nameRegex.test(pname.value) && pwd.value.length >= 8 && p3r.test(pwd.value) && p2r.test(pwd.value) && p1r.test(pwd.value)) {
         return true;
     } else {
         document.body.scrollTop = 0; // For Safari

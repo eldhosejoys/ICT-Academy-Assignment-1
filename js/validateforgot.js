@@ -33,7 +33,7 @@ email.onblur = function() {
 }
 
 formsubmitforgot.onsubmit = function() {
-    if (emailvalid == 1) {
+    if (emailRegex.test(email.value)) {
         return true;
     } else {
         formerror.innerHTML = "<div class='alert alert-danger rounded-0'>✖ Kindly check all the Fields of the Form. All Fields are required and should be valid.</div>";

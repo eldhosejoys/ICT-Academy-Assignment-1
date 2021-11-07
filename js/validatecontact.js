@@ -15,7 +15,7 @@ var messagevalid = 0;
 
 
 formsubmitcontact.onsubmit = function() {
-    if (emailvalid == 1 && namevalid == 1 && messagevalid == 1) {
+    if (emailRegex.test(email.value) && nameRegex.test(pname.value) && message.value.length >= 10) {
         return true;
     } else {
         formerror.innerHTML = "<div class='alert alert-danger rounded-0'>✖ Kindly check all the Fields of the Form. All Fields are required and should be valid.</div>";

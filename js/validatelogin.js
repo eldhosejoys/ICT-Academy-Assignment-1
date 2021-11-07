@@ -15,7 +15,7 @@ let p2r = /(?=.*[a-z])/;
 let p3r = /\d/;
 
 formsubmitlogin.onsubmit = function() {
-    if (emailvalid == 1 && pwdvalid == 1) {
+    if (emailRegex.test(email.value) && pwd.value.length >= 8 && p3r.test(pwd.value) && p2r.test(pwd.value) && p1r.test(pwd.value)) {
         return true;
     } else {
         document.body.scrollTop = 0; // For Safari
