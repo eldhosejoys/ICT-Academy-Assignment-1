@@ -36,6 +36,7 @@ formsubmitforgot.onsubmit = function() {
     if (emailRegex.test(email.value)) {
         return true;
     } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // For more details: https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
         formerror.innerHTML = "<div class='alert alert-danger rounded-0'>✖ Kindly check all the Fields of the Form. All Fields are required and should be valid.</div>";
         return false;
     }

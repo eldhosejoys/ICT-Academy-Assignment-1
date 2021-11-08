@@ -31,8 +31,7 @@ formsubmitsignup.onsubmit = function() {
     if (emailRegex.test(email.value) && (mobileRegex.test(mobile.value) || mobileRegex1.test(mobile.value) || mobileRegex2.test(mobile.value) || mobileRegex3.test(mobile.value)) && nameRegex.test(pname.value) && pwd.value.length >= 8 && p3r.test(pwd.value) && p2r.test(pwd.value) && p1r.test(pwd.value)) {
         return true;
     } else {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // For more details: https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
         formerror.innerHTML = "<div class='alert alert-danger rounded-0'>✖ Kindly check all the Fields of the Form. All Fields are required and should be valid.</div>";
         return false;
     }
